@@ -15,6 +15,7 @@ export async function createOrder(amount: number) {
 }
 
 export async function verifyPayment(paymentData: any) {
+  console.log(paymentData);
   const res = await fetch(`${API_URL}/payments/verify`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
